@@ -1,0 +1,15 @@
+out_to_x no
+own_window no
+out_to_console yes
+background no
+max_text_width 0
+# Update interval in seconds
+update_interval 2.0
+total_run_times 0
+override_utf8_locale yes
+
+TEXT
+
+[{ "full_text" : "MPD" , "color" : "\#b72f62" } ,
+ { "full_text" : "${if_mpd_playing}${mpd_smart 50} ${mpd_elapsed}/${mpd_length}${else}${mpd_status}${endif}","color" : "\#000000"   } ,  
+ { "full_text" : "${time %b %d %I:%M%P}","color" : "\#b492b6" }]  ,
